@@ -5,7 +5,8 @@ import css from './ContactForm.module.css';
 import clsx from 'clsx';
 import { useDispatch } from 'react-redux';
 import { nanoid } from 'nanoid';
-import { addContact } from '../../redux/contactsSlice';
+import { addContact } from '../../redux/contactsOps';
+// import { addContact } from '../../redux/contactsSlice';
 
 const initialValues = {
   id: '',
@@ -22,8 +23,8 @@ const ContactForm = () => {
   const handleSubmit = (values, actions) => {
     const contact = {
       ...values,
-      id: nanoid(),
     };
+    console.log(contact);
     // dispatch(addContact({ ...values, id: nanoid() }));
     const action = addContact(contact);
     dispatch(action);

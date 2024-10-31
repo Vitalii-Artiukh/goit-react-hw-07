@@ -7,14 +7,7 @@ const filterSlice = createSlice({
   initialState: initialContacts.filters,
   reducers: {
     changeFilter: (state, action) => {
-      /////////////  REDUX TOOLKIT  //////////////////////
       state.name = action.payload;
-
-      /////////////  REDUX  //////////////////////
-      // return {
-      //   ...state,
-      //   name: action.payload,
-      // };
     },
   },
 });
