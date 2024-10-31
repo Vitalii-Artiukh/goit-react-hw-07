@@ -1,0 +1,46 @@
+.form {
+  max-width: 300px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1.5px solid black;
+  border-radius: 6px;
+  background-color: rgb(255, 255, 255);
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: black;
+  font-size: 12px;
+}
+
+.input {
+  font-size: 16px;
+  font-weight: 500;
+
+  background-color: inherit;
+  color: inherit;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.288);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 4px;
+  border-radius: 2px;
+  color: black;
+  font-weight: 500;
+  background-color: rgb(211, 211, 211);
+}
