@@ -10,7 +10,7 @@ const ContactList = () => {
 
   return (
     <ul className={clsx(css.contactsWrapper)}>
-      {selectContacts.map(cont => (
+      {selectContacts?.map(cont => (
         <li key={cont.id} className={clsx(css.listItem)}>
           <Contact data={cont} />
         </li>
