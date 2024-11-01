@@ -1,6 +1,6 @@
 const initialContacts = {
   contacts: {
-    items: [],
+    items: null,
     loading: false,
     error: null,
   },
