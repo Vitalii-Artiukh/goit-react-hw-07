@@ -45,32 +45,6 @@ const contactsSlice = createSlice({
       })
       .addCase(deleteContact.rejected, handleRejected);
   },
-
-  // reducers: {
-  //   addContact: (state, action) => {
-  //     /////////////  REDUX TOOLKIT  //////////////////////
-  //     state.items.push(action.payload);
-
-  //     /////////////  REDUX  //////////////////////
-  //     //   return {
-  //     //     ...state,
-  //     //     items: [...state.items, action.payload],
-  //     //   };
-  //   },
-  //   deleteContact: (state, action) => {
-  //     /////////////  REDUX TOOLKIT  //////////////////////
-  //     state.items = state.items.filter(
-  //       contact => contact.id !== action.payload
-  //     );
-  //     /////////////  REDUX  //////////////////////
-  //     //   return {
-  //     //     ...state,
-  //     //     items: state.items.filter(
-  //     //       contact => contact.id !== action.payload
-  //     //     ),
-  //     //   };
-  //   },
-  // },
 });
 
 export default contactsSlice.reducer;

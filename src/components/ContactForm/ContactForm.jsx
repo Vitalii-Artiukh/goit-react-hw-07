@@ -1,12 +1,10 @@
 import { React, useId } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
-import contactSchema from '../API/validationSchema';
-import css from './ContactForm.module.css';
-import clsx from 'clsx';
 import { useDispatch } from 'react-redux';
-import { nanoid } from 'nanoid';
 import { addContact } from '../../redux/contactsOps';
-// import { addContact } from '../../redux/contactsSlice';
+import contactSchema from '../API/validationSchema';
+import clsx from 'clsx';
+import css from './ContactForm.module.css';
 
 const initialValues = {
   id: '',
@@ -17,15 +15,13 @@ const initialValues = {
 const ContactForm = () => {
   const nameInputId = useId();
   const numberInputId = useId();
-
   const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
     const contact = {
       ...values,
     };
-    console.log(contact);
-    // dispatch(addContact({ ...values, id: nanoid() }));
+
     const action = addContact(contact);
     dispatch(action);
 

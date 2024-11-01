@@ -1,11 +1,9 @@
 import { React } from 'react';
-import clsx from 'clsx';
 import { MdClose } from 'react-icons/md';
-
-import css from './Contact.module.css';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from '../../redux/contactsOps';
-// import { deleteContact } from '../../redux/contactsSlice';
+import clsx from 'clsx';
+import css from './Contact.module.css';
 
 const Contact = ({ data: { id, name, number } }) => {
   const dispatch = useDispatch();

@@ -141,3 +141,7 @@ textarea,
 select {
   font: inherit;
 }
+
+.wrapperLoader {
+  background-color: #646cff;
+}

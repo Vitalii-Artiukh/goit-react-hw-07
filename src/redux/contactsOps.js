@@ -5,6 +5,7 @@ axios.defaults.baseURL = 'https://672259d42108960b9cc415ed.mockapi.io/andyros';
 
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchAll',
+
   async (_, thunkAPI) => {
     try {
       const response = await axios.get('/contacts');
@@ -15,20 +16,9 @@ export const fetchContacts = createAsyncThunk(
   }
 );
 
-// export const fetchQueryContacts = createAsyncThunk(
-//   'contacts/fetchQuery',
-//   async (searchValue, thunkAPI) => {
-//     try {
-//       const response = await axios.get('/contacts/', searchValue);
-//       return response.data;
-//     } catch (error) {
-//       return thunkAPI.rejectWithValue(error.message);
-//     }
-//   }
-// );
-
 export const addContact = createAsyncThunk(
   'contacts/addContact',
+
   async (contact, thunkAPI) => {
     try {
       const response = await axios.post('/contacts', { ...contact });
@@ -41,6 +31,7 @@ export const addContact = createAsyncThunk(
 
 export const deleteContact = createAsyncThunk(
   'contacts/deleteContact',
+
   async (contactId, thunkAPI) => {
     try {
       const response = await axios.delete(`/contacts/${contactId}`);
